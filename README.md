@@ -4,7 +4,7 @@ Módulo (CRUD) para drupal 11
 
 ## Como rodar o teste?
 
-- Instale o docker com docker-compose
+- Instale o docker e docker-compose: https://www.docker.com/
 - Acesse a raiz do diretório e rode o seguinte comando: 'docker-compose up -d';
 - Acesse a url: http://localhost:8080/ e siga o passo a passo para a instalação do Drupal;
     - Os dados solicitados para a configuração do banco de dados estão em docker-compose.yml
