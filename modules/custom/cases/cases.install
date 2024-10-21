@@ -1,0 +1,28 @@
+<?php
+
+function cases_schema()
+    {
+        $schema['cases'] = [
+            'fields' => [
+              'id' => [
+                  'type' => 'serial',
+                  'not null' => true,
+              ],
+              'image' => [
+                  'type' => 'varchar',
+                  'length' => 255,
+              ],
+              'title' => [
+                  'type' => 'varchar',
+                  'length' => 150,
+              ],
+              'description' => [
+                  'type' => 'varchar',
+                  'length' => 255,
+              ],
+            ],
+            'primary key' => ['id'],
+        ];
+
+        return $schema;
+    }

@@ -1,0 +1,42 @@
+cases.list:
+  path: '/cases'
+  defaults:
+    _controller: '\Drupal\cases\Controller\CasesController::list'
+    _title: 'Lista de cases'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: TRUE 
+
+cases.add:
+  path: '/cases/form'
+  defaults:
+    _form: '\Drupal\cases\Form\CaseForm'
+    _title: 'Formulário de case'
+  requirements:
+    _permission: 'access content'
+  methods: ['GET', 'POST']
+  options:
+    no_cache: TRUE
+
+cases.delete:
+  path: '/cases/form/delete/{cid}'
+  defaults:
+    _form: '\Drupal\cases\Form\DeleteForm'
+    _title: 'Remover case'
+  requirements:
+    _permission: 'administer content'
+  options:
+    parameters:
+      cid:
+        type: 'integer'
+    no_cache: TRUE
+
+cases.api:
+  path: '/api/cases/{id}'
+  defaults:
+    _controller: '\Drupal\cases\Controller\CasesController::getCase'
+    _title: 'Case API'
+  requirements:
+    _permission: 'access content'
+  methods: [GET]

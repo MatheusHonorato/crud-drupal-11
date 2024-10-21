@@ -1,0 +1,4 @@
+access content:
+  title: 'Access content'
+  description: 'Permission to access CRUD operations.'
+  restrict access: false
